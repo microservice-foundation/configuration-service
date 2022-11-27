@@ -1,0 +1,30 @@
+# application configuration
+server:
+  port: 0
+logging:
+  level:
+    root: DEBUG
+
+# eureka configuration
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    healthcheck:
+      enabled: true
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:8770/eureka}
+  instance:
+    hostname: ${spring.application.name}
+    instance-id: ${spring.application.name}:${random.int}
+    preferIpAddress: true
+
+# configuration-store configuration
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: ${GITHUB_URI:https://github.com/microservice-foundation/services-configurations-store.git}
+          searchPaths:
+            - '*service'

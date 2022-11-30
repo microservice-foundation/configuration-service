@@ -17,6 +17,7 @@ eureka:
   instance:
     hostname: ${spring.application.name}
     instance-id: ${spring.application.name}:${random.int}
+    lease-renewal-interval-in-seconds: 10
     preferIpAddress: true
 
 # configuration-store configuration

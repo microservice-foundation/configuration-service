@@ -1,8 +1,3 @@
-# application configuration
-logging:
-  level:
-    root: DEBUG
-
 # eureka configuration
 eureka:
   client:
@@ -11,7 +6,7 @@ eureka:
     healthcheck:
       enabled: true
     serviceUrl:
-      defaultZone: ${EUREKA_URI:http://localhost:8770/eureka}
+      defaultZone: ${EUREKA_HOST:http://localhost:8770}/eureka
   instance:
     hostname: ${spring.application.name}
     instance-id: ${spring.application.name}:${random.int}
@@ -24,6 +19,6 @@ spring:
     config:
       server:
         git:
-          uri: ${GITHUB_URI:https://github.com/microservice-foundation/services-configurations-store.git}
+          uri: ${GITHUB_URL:https://github.com/microservice-foundation/services-configurations-store.git}
           searchPaths:
             - '*service'

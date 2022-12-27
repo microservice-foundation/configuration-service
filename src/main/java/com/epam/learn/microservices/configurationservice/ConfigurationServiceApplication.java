@@ -9,6 +9,7 @@ import org.springframework.cloud.config.server.EnableConfigServer;
 @EnableDiscoveryClient
 @EnableConfigServer
 public class ConfigurationServiceApplication {
+    //TODO: add refresh to each service
     public static void main(String[] args) {
         SpringApplication.run(ConfigurationServiceApplication.class, args);
     }

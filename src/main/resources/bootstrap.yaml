@@ -1,2 +1,2 @@
 spring.application.name: ${MICROSERVICE_NAME:configuration-service}
-server.port: ${SERVICE_PORT:0}
+server.port: 0

@@ -1,3 +1,6 @@
+# application configuration
+logging.level.root: DEBUG
+
 # eureka configuration
 eureka:
   client:
